@@ -1,0 +1,46 @@
+---
+title: 'Deploying to Production'
+description: 'Guide for deploying Aethel to production environment'
+---
+
+## Getting started
+
+Make sure you followed the documentation until here, if you haven't, go back.
+
+### Building
+
+```shell
+bun run build && cd web && bun run build
+```
+
+### Starting Aethel
+
+You don't need to start the frontend, Aethel automatically serves the Frontend.
+
+```sh
+cd .. && bun run start
+```
+
+### Discord Developers Portal Setup
+
+Now, you need to setup your bot in the Discord Developers Portal.
+
+Go to the Discord Developers Portal, select your Discord Bot, and navigate to the Installation Tab.
+
+Make sure that both User Install and Guild install are checked off, then scroll down.
+
+For Guild Installs, make sure you have the `application.commands` and `bot` scopes set. Without the `bot` scope, you won't be able to install Aethel in your server, and without the User Install checked off, you won't be able to install Aethel in your account.
+
+Now, navigate to the Bot tab, scroll down until you see "Privileged Gateway Intents"
+
+Enable all of them, if you don't enable all the Gateway Intents, Aethel will not work correctly or at all.
+
+
+
+### Start the bot
+
+Now, you are safe to start Aethel and install it in your account or server!
+
+```
+bun run start
+```

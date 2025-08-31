@@ -1,0 +1,80 @@
+---
+title: 'Environment Variables'
+description: 'Configuration guide for Aethel environment variables'
+---
+
+
+```shell
+mv .env.example .env
+```
+
+
+
+`ALLOWED_ORIGINS`
+
+* Set allowed origins for the API status endpoint
+
+`API_KEY_ENCRYPTION_SECRET`
+
+* Encryption secret for API keys stored in the database (Like custom AI API keys set by users)
+
+`CLIENT_ID`
+
+* The bot's user ID or Client ID found in the Oauth section of the [Discord Developer Portal](https://discord.com/developers/)
+
+`DATABASE_URL`&#x20;
+
+* PostgreSQL database URL for storing reminders, API keys, etc.
+
+`OPENROUTER_API_KEY`
+
+* Your [OpenRouter](https://openrouter.ai) API Key, required for the /ai command.
+
+`OPENWEATHER_API_KEY`&#x20;
+
+* Your [OpenWeather](https://openweathermap.org) API Key, required for the /weather command.
+
+`LOG_LEVEL`
+
+* Log level for console, Options are: `INFO, ERROR, DEBUG`
+
+`NODE_ENV`
+
+* `PRODUCTION/DEVELOPMENT`
+
+`SOURCE_COMMIT`
+
+* Source Commit for deployment webhook/status page, If using Coolify, you can set this as $SOURCE\_COMMIT using [Coolify Magic Env](https://coolify.io/docs/knowledge-base/environment-variables)
+
+`STATUS_API_KEY`
+
+* API key for the status API endpoint.
+
+`TOKEN`
+
+* The bot's Discord Token
+
+`DEPLOYMENT_WEBHOOK_URL`
+
+* The webhook url where the bot will send deployed notifications.
+
+### Frontend Environment Variables
+
+These variables are also set in the main .env file at the root of the Aethel folder, not the web/ folder.
+
+`VITE_BOT_API_URL`
+
+* Bot's API URL, default is `localhost:2020`
+
+`VITE_FRONTEND_URL`
+
+* Frontend's URL, on production, default is also `localhost:2020` on development, it's `localhost:3000`
+
+`VITE_STATUS_API_KEY`
+
+* Has to be the same as STATUS\_API\_KEY for the frontend status page to work.\
+
+
+`VITE_DISCORD_CLIENT_ID`
+
+* Same as CLIENT\_ID, else the Dashboard won't work.&#x20;
