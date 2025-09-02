@@ -40,4 +40,9 @@ export default defineConfig({
 			],
 		}),
 	],
+	vite: {
+		preview: {
+			allowedHosts: ['docs.aethel.xyz'],
+		},
+	},
 });
