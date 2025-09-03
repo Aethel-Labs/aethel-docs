@@ -41,9 +41,7 @@ export default defineConfig({
 		}),
 	],
 	
-{
-  server: {
-    allowedHosts: ['docs.aethel.xyz']
-  }
-},	
+	server: {
+		allowedHosts: ['docs.aethel.xyz']
+	},
 });
